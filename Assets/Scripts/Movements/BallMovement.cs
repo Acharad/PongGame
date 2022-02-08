@@ -25,7 +25,7 @@ public class BallMovement : MonoBehaviour
             this.MoveBall(new Vector2(1, 0));
     }
 
-    private void MoveBall(Vector2 dir)
+    public void MoveBall(Vector2 dir)
     {
         dir = dir.normalized;
 
@@ -36,7 +36,7 @@ public class BallMovement : MonoBehaviour
         _rigidBody2D.velocity = dir * speed;
     }
 
-    private void IncreaseHitCoutner()
+    public void IncreaseHitCoutner()
     {
         if(this.hitCounter * this.extraSpeedPerHit <= this.maxExtraSpeed)
         {

@@ -337,7 +337,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -725,7 +725,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1326,6 +1326,7 @@ GameObject:
   - component: {fileID: 1323170997}
   - component: {fileID: 1323170996}
   - component: {fileID: 1323170998}
+  - component: {fileID: 1323170999}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1410,6 +1411,20 @@ MonoBehaviour:
   movementSpeed: 400
   extraSpeedPerHit: 50
   maxExtraSpeed: 1000
+--- !u!114 &1323170999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323170994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fa4a5b1b40e1645850dcd4ccb31e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballMovement: {fileID: 1323170998}
+  _scoreController: {fileID: 2028415559}
 --- !u!1 &1374463836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +1972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2028415558}
+  - component: {fileID: 2028415559}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -1981,6 +1997,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028415559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028415557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922944f711fd8ef45b9a9863ca48e3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePlayer1: 0
+  scorePlayer2: 0
+  scoreTextPlayer1: {fileID: 2022043600}
+  scoreTextPlayer2: {fileID: 2008030629}
+  goalToWin: 3
 --- !u!1 &2039882119
 GameObject:
   m_ObjectHideFlags: 0
