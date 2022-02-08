@@ -42,11 +42,13 @@ public class BallCollisionController : MonoBehaviour
         {
             _isPlayer1 = false;
             _scoreController.GoalPlayer(_isPlayer1);
+            StartCoroutine(_ballMovement.StartBall(!_isPlayer1));
         }
         else if(other.gameObject.name == "WallRight")
         {
             _isPlayer1 = true;
             _scoreController.GoalPlayer(_isPlayer1);
+            StartCoroutine(_ballMovement.StartBall(!_isPlayer1));
         }
 
     }
